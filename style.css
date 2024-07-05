@@ -1,0 +1,386 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+:root {
+    --c-brand: #f83691;
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #303050;
+    --c-body: #636383;
+    --c-light: #f6f6f6;
+    --f-main: "Bai Jamjuree", sans-serif;
+    --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: var(--f-main);
+    color: var(--c-body);
+    line-height: 1.7;
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-dark);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 120px;
+     /* padding-bottom: 120px;  */
+}
+
+.text-brand {
+    color: var(--c-brand);
+}
+
+.setion-title {
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.setion-title .line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+}
+/* Navbar */
+.navbar {
+    background-color: white;
+    /* padding-top: 30px;
+    padding-bottom: 30px;  */
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active  {
+    color: var(--c-brand);
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--c-dark);
+}
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--c-brand);
+    color: white;
+    border: 2px solid var(--c-brand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+.social-icon:hover {
+    background-color: transparent;
+}
+
+/* Btn */
+.btn {
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand,
+.btn-brand:focus {
+    background-color: var(--c-brand);
+    color: white;
+    border-color: var(--c-brand);
+}
+
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--c-brand);
+    border-color: var(--c-brand);
+}
+
+
+/* Home */
+#home {
+    background-image: url(images/kul7.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Services */
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--c-brand);
+    color: white;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span {
+    font-weight: 700;
+}
+
+.custom-link i {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c-brand);
+    border-radius: 100px;
+    color: white;
+    margin-left: 6px;
+    transition: var(--transition);
+}
+
+.custom-link:hover i {
+    transform: translateX(6px);
+}
+
+/* Project */
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--c-brand);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img, 
+.project .content {
+    transition: var(--transition);
+}
+
+.project:hover .content {
+    top: 0;
+}
+
+.project:hover img {
+    transform: translateY(-100%);
+}
+.ex-me {
+    margin-top: 35px;
+    margin-left: 15px;
+}
+.border-left-custom {
+    border-left: 3px solid white;
+    font-size: larger;
+}
+.dot-circle {
+    position: absolute;
+    top: 2px;
+    left: -27px;
+    font-size: 22px;
+    color: white;
+}
+.parallax-bg {
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.8)),url(images/kul5.jpg)no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+}
+#contact .form-control {
+    border-radius: 0;
+}
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+#contact input.form-control {
+    height: 44px;
+}
+
+.card1 {
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+.card1 .box {
+    position: absolute;
+    color: #262626;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: var(--color-bg2);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+.card1 .box.front,
+.card1 .box.back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1 .box.front img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid #262626;
+	margin-bottom: 25px;
+}
+
+.card1:hover .box.front {
+    transform: rotateY(180deg);
+}
+.box.front h2 {
+	font-family: 'Bebas Neue', cursive;
+}
+.box.front h4 {
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.socials i {
+	margin: 0 15px;
+}
+.card1 .box.back {
+    position: absolute;
+    background: var(--color-bg2);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card1 .box.back .fa-quote-left {
+	position: absolute;
+	top: 25px;
+	left: 180px;
+	font-size: 3.2rem;
+}
+
+.card1:hover .box.back {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.animate__animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+  
+  .animate__fadeInDown {
+    animation-name: fadeInDown;
+  }
+  
+  .animate__fadeInLeft {
+    animation-name: fadeInLeft;
+  }
+  
+  .animate__fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  .animate__bounceIn {
+    animation-name: bounceIn;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounceIn {
+    from {
+      transform: scale3d(0.3, 0.3, 0.3);
+      opacity: 0;
+    }
+    to {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+  }
+      
+
